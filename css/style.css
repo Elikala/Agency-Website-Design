@@ -1,62 +1,44 @@
 
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* 1. Use a more-intuitive box-sizing model. */
 *, *::before, *::after {
     box-sizing: border-box;
   }
-  /*
-    2. Remove default margin
-  */
+  /* 2. Remove default margin */
   * {
     margin: 0;
   }
-  /*
-    3. Allow percentage-based heights in the application
-  */
+  /* 3. Allow percentage-based heights in the application */
   html, body {
     height: 100%;
   }
-  /*
-    Typographic tweaks!
-    4. Add accessible line-height
-    5. Improve text rendering
-  */
+  /* Typographic tweaks! 4. Add accessible line-height 5. Improve text rendering */
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-  /*
-    6. Improve media defaults
-  */
+  /* 6. Improve media defaults */
   img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
   }
-  /*
-    7. Remove built-in form typography styles
-  */
+  /* 7. Remove built-in form typography styles */
   input, button, textarea, select {
     font: inherit;
   }
-  /*
-    8. Avoid text overflows
-  */
+  /* 8. Avoid text overflows */
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
-  /*
-    9. Create a root stacking context
-  */
+  /* 9. Create a root stacking context */
   #root, #__next {
     isolation: isolate;
   }
 
-  /* END RESET*/
+/* END RESET*/
 
 
-  /* START TYPOGRAPHY */
+/* START TYPOGRAPHY */
   html {font-size: 100%;} /*16px*/
 
   body {
@@ -90,10 +72,10 @@
   h5 {font-size: 1.414rem;}
   
   small, .text_small {font-size: 0.707rem;}
-  /* END TYPOGRAPHY */
+/* END TYPOGRAPHY */
 
 
-  /* START GLOBAL STYLES */
+/* START GLOBAL STYLES */
   a {
   text-decoration: none;
   }
@@ -113,10 +95,46 @@ display: flex;
 .y-c {
     align-items: center;
 }
+.m2{
+    padding: 4em 0 2em;
+}
+.btn-group{
+    margin: 2em 0;
+}
+.btn-outline {
+    border: 2px solid rgb(22, 22, 22);
+    font-weight: 500;
+}
 
-  /* END GLOBAL STYLES */
+.btn{
+    padding: 8px 32px;
+    color: rgb(22, 22, 22);
+    border-radius: 30px;
+    text-align: center;
+    }
 
-   /* MAIN STYLES */
+.btn-primary {
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-weight: 500;
+    line-height: 41px;
+    margin-right: 1em;
+}
+
+.btn-play{
+    align-items: center;
+    padding: 0;
+    font-weight: 500;
+}
+
+#play-btn{
+    width: 60px;
+    height: 60px;
+    margin: 0 1em;
+}
+/* END GLOBAL STYLES */
+
+/* MAIN STYLES */
   .hero {
 
   }
@@ -128,5 +146,69 @@ display: flex;
   nav a {
     margin: 0 1em;
   }
+.hero{
+    background: linear-gradient(90deg, #00c9ff30 0%, #92fe9d75 100%);
+}
 
-  /* END MAIN STYLES */
+  .hero-copy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+  }
+
+  .hero-copy h4 {
+    display: flex;
+    align-items: center;
+  }
+
+ .hero-copy hr {
+    width: 20px;
+    margin-right: 0.3rem;
+    height: 4px;
+    background-color: #333;
+ }
+  .image {
+    box-sizing: border-box;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 262px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .border-line {
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 300px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .image-mask {
+    background: url(/assets/images/bg-image.jpg) 50% 0%;
+    background-size: cover;
+  }
+
+ .imag {
+    height: 700px;
+    width: 700px;
+    background-color: red;
+    -webkit-mask-image: url(/assets/images/blob.svg); 
+    mask-image: url(/assets/images/bg-image.jpg);
+  }
+.im {
+    clip-path: circle(50% at 50% 50%);
+    width: 500px;
+    height: 750px;
+    margin: 0 auto;
+    width: 66%;
+}
+
+/* END MAIN STYLES */
